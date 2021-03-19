@@ -1,0 +1,41 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <title>TEST STATS {{ID}}</title>
+</head>
+<body data-new-gr-c-s-check-loaded="14.997.0" data-gr-ext-installed="">
+    <div class="jumbotron" style="align-items: center">
+        <h2>Players Data Entry</h2>
+        <h2> Fill the testSTATS </h2>
+    </div>
+    <form enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+        <p><label for="id_Player_id">Player id:</label> <input type="number" name="Player_id" class="form-control" required="" id="id_Player_id" value="{{ID}}"></p>
+<p><label for="id_test_matches">Test matches:</label> <input type="number" name="test_matches" class="form-control" required="" id="id_test_matches" value="{{test_matches}}"></p>
+<p><label for="id_test_runs">Test runs:</label> <input type="number" name="test_runs" class="form-control" required="" id="id_test_runs" value ="{{test_runs}}"></p>
+<p><label for="id_test_fours">Test fours:</label> <input type="number" name="test_fours" class="form-control" required="" id="id_test_fours" value ="{{test_fours}}"></p>
+<p><label for="id_test_sixes">Test sixes:</label> <input type="number" name="test_sixes" class="form-control" required="" id="id_test_sixes" value ="{{test_sixes}}"></p>
+<p><label for="id_test_ducks">Test ducks:</label> <input type="number" name="test_ducks" class="form-control" required="" id="id_test_ducks" value ="{{test_ducks}}"></p>
+<p><label for="id_test_balls">Test balls:</label> <input type="number" name="test_balls" class="form-control" required="" id="id_test_balls" value ="{{test_balls}}"></p>
+<p><label for="id_test_wicket">Test wicket:</label> <input type="number" name="test_wicket" class="form-control" required="" id="id_test_wicket" value ="{{test_wicket}}"></p>
+<p><label for="id_test_economy">Test economy:</label> <input type="number" name="test_economy" class="form-control" required="" id="id_test_economy" value ="{{test_economy}}"></p>
+<p><label for="id_test_5w">Test 5w:</label> <input type="number" name="test_5w" class="form-control" required="" id="id_test_5w" value ="{{test_5w}}"></p>
+        
+        
+
+         <!-- id_Player_img_1 -->
+
+            <input class="btn btn-primary" type="submit" value="Submit">
+        </form>
+
+
+</body></html>
