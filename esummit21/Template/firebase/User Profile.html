@@ -1,0 +1,52 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <title>Profile {{Name}}</title>
+</head>
+<body data-new-gr-c-s-check-loaded="14.997.0" data-gr-ext-installed="">
+    <div class="jumbotron" style="align-items: center">
+        <h2>Profile</h2>
+        <h2> Edit Profile Details </h2>
+    </div>
+    <form enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+        <p>
+            <label for="id_odi_matches">Name : </label> 
+            <input type="text" name="Name" class="form-control" required="" id="id_odi_matches" value="{{Name}}">
+        </p>
+        <p>
+            <label for="id_odi_runs">Status : </label> 
+            <input type="number" name="STATUS" class="form-control" required="" id="id_odi_runs" value="{{STATUS}}">
+        </p>
+        <p>
+            <label for="id_odi_fours">Money</label> 
+            <input type="number" name="Money" class="form-control" required="" id="id_odi_fours" value ="{{Money}}">
+        </p>
+        <table class="table">
+            <tr>
+                <th>Player Name</th>
+                <th>Remove</th>
+            </tr>
+            {%for i in Players %}
+            <tr>
+                <td><h4>{{i.Name}}</h4></td>
+                <td><a href="/firebase/resetpp/{{i.ID}}" class="btn btn-danger" onclick="{confirm('Are you sure you want to remove this player ?')}">Remove</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        
+         <!-- id_Player_img_1 -->
+
+            <input class="btn btn-primary" type="submit" value="Submit">
+        </form>
+
+</body></html>
