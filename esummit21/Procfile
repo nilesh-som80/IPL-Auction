@@ -1,1 +1,0 @@
-web: gunicorn esummit21.wsgi
